@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 import compareImages from "resemblejs/compareImages";
-import fs from "mz";
+var fs = require("mz/fs");
 
 interface Analysis {
   /**

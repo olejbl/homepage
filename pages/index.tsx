@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 import compareImages from "resemblejs/compareImages";
-var fs = require("graceful-fs");
+import fs from "fs";
 interface Analysis {
   /**
    * Run the analysis on this image and get the result
@@ -230,12 +230,12 @@ async function getDiff() {
   };
 
   const data = await compareImages(
-    await fs.readFile("/People.jpg"),
-    await fs.readFile("/People2.jpg"),
+    await fs.readFileSync("/People.jpg"),
+    await fs.readFileSync("/People2.jpg"),
     options
   );
 
-  await fs.writeFile("/output.png", data.getBuffer(true));
+  await fs.writeFileSync("/output.png", data.getBuffer(true));
 }
 
 export default function Home() {

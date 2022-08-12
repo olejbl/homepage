@@ -9,6 +9,7 @@
   "dependencies": {
     "@types/mz": "^2.7.4",
     "@types/resemblejs": "^4.1.0",
+    "fs": "^0.0.1-security",
     "graceful-fs": "^4.2.10",
     "next": "latest",
     "react": "latest",

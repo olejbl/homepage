@@ -2,8 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 import compareImages from "resemblejs/compareImages";
-var fs = require("mz/fs");
-
+var fs = require("graceful-fs");
 interface Analysis {
   /**
    * Run the analysis on this image and get the result

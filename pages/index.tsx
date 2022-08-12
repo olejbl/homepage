@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
-const compareImages = require("resemblejs/compareImages");
-const fs = require("mz/fs");
+import compareImages from "resemblejs";
+import fs from "mz/fs";
 
 async function getDiff() {
   const options = {

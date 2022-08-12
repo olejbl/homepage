@@ -230,8 +230,8 @@ async function getDiff() {
   };
 
   const data = await compareImages(
-    await fs.readFile("./People.jpg"),
-    await fs.readFile("./People2.jpg"),
+    await fs.readFile("People.jpg"),
+    await fs.readFile("./public/People2.jpg"),
     options
   );
 

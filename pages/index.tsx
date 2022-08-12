@@ -230,12 +230,12 @@ async function getDiff() {
   };
 
   const data = await compareImages(
-    await fs.readFileSync("/People.jpg"),
-    await fs.readFileSync("/People2.jpg"),
+    await fs.readFileSync("../public/People.jpg"),
+    await fs.readFileSync("../public/People2.jpg"),
     options
   );
 
-  await fs.writeFileSync("/output.png", data.getBuffer(true));
+  await fs.writeFileSync("../public/output.png", data.getBuffer(true));
 }
 
 export default function Home() {

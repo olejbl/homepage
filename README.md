@@ -1,53 +1,31 @@
-# Welcome to Remix!
+# Deploying to GitHub Pages
 
-- [Remix Docs](https://remix.run/docs)
+This example supports deloying a static Next.js application (using `next export`) to GitHub Pages.
 
-## Development
+## How to use
 
-From your terminal:
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
 
-```sh
-npm run dev
+```bash
+npx create-next-app --example github-pages nextjs-github-pages
+# or
+yarn create next-app --example github-pages nextjs-github-pages
+# or
+pnpm create next-app --example github-pages nextjs-github-pages
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
+### Deploy to GitHub Pages
 
-## Deployment
+1.  Create a new public GitHub repository.
+1.  Edit `next.config.js` to match your GitHub repository name.
+1.  Push the starter code to the `main` branch.
+1.  Run the `deploy` script (e.g. `npm run deploy`) to create the `gh-pages` branch.
+1.  On GitHub, go to **Settings** > **Pages** > **Source**, and choose `gh-pages` as the branch with the `/root` folder. Hit **Save**.
+1.  Make a change.
+1.  Run the `deploy` script again to push the changes to GitHub Pages.
 
-First, build your app for production:
+Congratulations! You should have a URL like:
 
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
+```bash
+https://<github-user-name>.github.io/<github-project-name>/
 ```

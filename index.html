@@ -42,7 +42,7 @@ var particleSystem = function(cfg)
   this.initMessage();
 
   // create the particles, add base 2 number, higher = less particles
-  for(var i=0;i<this.area.length;i+=128)
+  for(var i=0;i<this.area.length;i+=64)
   {
     this.particles.push(new particle({
       x: this.area[i][0],
@@ -73,7 +73,7 @@ particleSystem.prototype.initCFG = function(cfg)
 particleSystem.prototype.initMessage = function()
 {
   // this is the unicode hex of a heart
-  this.str = "2604";
+  this.str = "2603";
   this.fontStr = "400pt Helvetica Arial, sans-serif";
 
   this.ctx.beginPath();

@@ -18,7 +18,7 @@ var particle = function(cfg,ctx)
   this.vy  = cfg.vy || 1;
 
   this.radius = cfg.radius || 1;
-  this.color = cfg.color || '#bae807';
+  this.color = cfg.color || '#ffa500';
 };
 
 particle.prototype.draw = function()
@@ -73,7 +73,7 @@ particleSystem.prototype.initCFG = function(cfg)
 particleSystem.prototype.initMessage = function()
 {
   // this is the unicode hex of a heart
-  this.str = "2603";
+  this.str = "2620";
   this.fontStr = "400pt Helvetica Arial, sans-serif";
 
   this.ctx.beginPath();
@@ -132,7 +132,7 @@ particleSystem.prototype.drawConnectionLine = function(p1, p2)
 {
   // Draw the line between particles, opacity based on distance
   this.ctx.beginPath();
-  this.ctx.strokeStyle = "rgba(1,240,253,"+(1 - (Math.sqrt(this.getDistX(p1,p2) + this.getDistY(p1,p2)) / this.min_dist))+")";
+  this.ctx.strokeStyle = "rgba(255,165,0,"+(1 - (Math.sqrt(this.getDistX(p1,p2) + this.getDistY(p1,p2)) / this.min_dist))+")";
   this.ctx.moveTo(p1.x, p1.y);
   this.ctx.lineTo(p2.x, p2.y);
   this.ctx.stroke();
@@ -214,7 +214,7 @@ particleSystem.prototype.toPosY = function(i, w)
 particleSystem.prototype.repaint = function()
 {
   // clear the screen
-  this.ctx.fillStyle ="rgba(188,231,6,.1)";
+  this.ctx.fillStyle ="rgba(0,255,165,.1)";
   //this.ctx.fillStyle = "#063608";
   this.ctx.fillRect(0,0,this.width,this.height);
   this.ctx.font = "200pt Helvetica Arial, sans-serif";

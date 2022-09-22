@@ -1,10 +1,44 @@
 <html>
   <head>
-      <style></style>
+      <style>
+    body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+    </style>
   </head>
+  
 
   <body>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc1gCA_Sz-563Y6m5wWXin7JKoO8OW2RsjtHlQnUY2fETzj0Q/viewform?embedded=true" width="1080" height="589" frameborder="0" marginheight="0" marginwidth="0">Laster inn …</iframe>
+    <h1 class=typewriter>Ole Jacob<h1/>
     <canvas id="container"></canvas>
     <script type="text/javascript">
 //Particle
